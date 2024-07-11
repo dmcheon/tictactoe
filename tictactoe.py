@@ -14,7 +14,7 @@ def checkVertical(board: list) -> int:
     return: The value of the winner (1 or 2) if found, otherwise 0
     """
     # Alternativly, 
-    return checkHorizontal(list(zip(*board)))
+    # return checkHorizontal(list(zip(*board)))
 
     size = len(board)
     for i in range(size):
