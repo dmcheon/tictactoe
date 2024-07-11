@@ -86,10 +86,6 @@ def isGameOver(board: list, winner: int) -> bool:
     else:
         return not anyMovesLeft(board)
     
-    
-def get_user_input(board):
-    raise NotImplemented()
-
 
 def main():
     # board: 2D list representing the 4x4 tic-tac-toe board
@@ -99,6 +95,12 @@ def main():
         
     # get user input
     board = [list(map(int, input().split())) for _ in range(4)]
+    
+    # sanity check
+    for row in board:
+        if len(row) != 4:
+            raise ValueError("Each row should have four inputs.")
+        
     winner = checkWinner(board)
 
     if isGameOver(board, winner):
