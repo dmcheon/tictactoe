@@ -6,13 +6,13 @@ This is a 4x4 Tic-tac-toe solver implemented in Python. It includes the core gam
 
 - Functions to check for winning conditions (vertical, horizontal, diagonal, 4 corners, 2x2 boxes)
 - Function to check if any moves are left
-- Game state management to determine if the game is over
+- Function to determine if the game is over
 
 ### How to play
 - Execute the script by running the following command in your terminal or command prompt:
-      ```bash
-      python tic_tac_toe.py
-      ```
+  ```bash
+  python tictactoe.py
+  ```
 - When prompted, enter the current state of the board.
     - The board is a 4x4 grid where:
         - `0` represents an empty cell
