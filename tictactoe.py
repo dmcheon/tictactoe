@@ -3,7 +3,7 @@ def checkCells(c1: int, c2: int, c3: int, c4: int) -> bool:
     Check if four cells have the same non-zero value.
 
     param c1 to c4: First to Fourth cell values
-    :return: True if all four cells are the same and not zero, else False
+    return: True if all four cells are the same and not zero, else False
     """
     return c1 == c2 == c3 == c4 != 0
     
