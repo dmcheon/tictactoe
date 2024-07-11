@@ -14,7 +14,8 @@ def checkVertical(board: list) -> int:
     return: The value of the winner (1 or 2) if found, otherwise 0
     """
     # Alternativly, 
-    # return checkHorizontal(list(zip(*board)))
+    return checkHorizontal(list(zip(*board)))
+
     size = len(board)
     for i in range(size):
         if checkCells(board[0][i],board[1][i],board[2][i],board[3][i]):
@@ -38,6 +39,7 @@ def checkDiagonal(board: list) -> int:
 def check4Corners(board: list) -> int:
     if checkCells(board[0][0], board[0][3], board[3][0], board[3][3]):
         return board[0][0]
+    return 0
     
 def check2by2box(board: list) -> int:
     size = len(board) - 1
@@ -85,28 +87,32 @@ def isGameOver(board: list, winner: int) -> bool:
         return not anyMovesLeft(board)
     
     
+def get_user_input(board):
+    raise NotImplemented()
+
+
 def main():
     # board: 2D list representing the 4x4 tic-tac-toe board
-    # 0 means empty cell, 1 means the first player's stone 
-    # and 2 means the second player's stone
-    board = [[0]*4]*4
+    # 0 means empty cell, 1 means the first player's move
+    # and 2 means the second player's move
     
-    for _ in range(len(board) * len(board[0])):
         
-        winner = checkWinner(board)
-        
-        if isGameOver(board, winner):
-            if winner == 0:
-                print("Tie")
-            elif winner == 1:
-                print("First player wins!")
-            elif winner == 2:
-                print("Second player wins!")
-            else:
-                raise ValueError()
-            break
+    # get user input
+    board = [list(map(int, input().split())) for _ in range(4)]
+    winner = checkWinner(board)
+
+    if isGameOver(board, winner):
+        if winner == 0:
+            print("Tie")
+        elif winner == 1:
+            print("First player wins!")
+        elif winner == 2:
+            print("Second player wins!")
         else:
-            # Get user input
-            pass
+            raise ValueError()
+    else:
+        print("Continue")
+     
         
-        
+if __name__ == "__main__":
+    main()
