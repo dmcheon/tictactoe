@@ -1,7 +1,5 @@
 ## Tic-tac-toe (4x4)
 
-## Tic-tac-toe (4x4)
-
 This is a 4x4 Tic-tac-toe solver implemented in Python. It includes the core game logic for checking winners and managing game states. Note that the input UI is not implemented yet.
 
 ### Features
