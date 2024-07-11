@@ -40,9 +40,9 @@ This is a 4x4 Tic-tac-toe solver implemented in Python. It includes the core gam
       1 0 2 1
       ```
 - The script will evaluate the board and determine the game state:
-        - If there is a winner, it will print either "First player wins!" or "Second player wins!".
-        - If the game is a tie (no moves left and no winner), it will print "Tie".
-        - If the game is not yet over (there are still moves left and no winner), it will print "Continue".
+    - If there is a winner, it will print either "First player wins!" or "Second player wins!".
+    - If the game is a tie (no moves left and no winner), it will print "Tie".
+    - If the game is not yet over (there are still moves left and no winner), it will print "Continue".
 
 
 ### Requirements
